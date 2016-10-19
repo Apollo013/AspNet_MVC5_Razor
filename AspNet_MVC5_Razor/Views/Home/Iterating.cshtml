@@ -1,0 +1,30 @@
+﻿@model List<AspNet_MVC5_Razor.Models.Customer>
+@{
+    ViewBag.Title = "Iterating";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Iterating</h2>
+<div class="row">
+    <h3>Iterating the Model</h3>
+</div>
+<ul>
+    @foreach (var customer in @Model)
+    {
+        <li>@customer.Name</li>
+    }
+</ul>
+
+<div class="row">
+    <h3>While Loop</h3>
+    @{
+        int i = 0;
+        while (i < 5)
+        {
+            i++;
+            <p>Line No: @i</p>
+        }
+    }
+</div>
+
+
