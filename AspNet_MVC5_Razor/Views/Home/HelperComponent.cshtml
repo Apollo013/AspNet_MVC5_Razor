@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "HelperComponent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Helper Components</h2>
+
+<div class="row">
+    <h3>Currency Component</h3>
+    <p>Component used to format the currency and colour of an element depending on it's value</p>
+    @{
+        var amounts = new List<decimal> { 20.36m, 50, -24.69m, 85.55m };
+    }
+
+    @helper formatAmount(decimal amount)
+    {
+        string color = "green";
+        if (amount < 0)
+        {
+            color = "red";
+        }
+        <span style="color:@color">@String.Format("{0:c}", amount)</span>
+    }
+</div>
+<li>
+    @foreach (var amt in amounts)
+    {
+        <ul>@formatAmount(amt)</ul>
+    }
+</li>

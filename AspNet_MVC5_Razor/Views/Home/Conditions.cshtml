@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Conditions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Conditions</h2>
+
+<div class="row">
+    <h3>If/Else Condition - DateTime</h3>
+    <p>Display should be 'Good Morning', 'Good AfterNoon' or 'Good Evening' depending on the hour of day</p>
+    @{
+        var txt = "";
+        if (DateTime.Now.Hour > 18)
+        {
+            txt = "Good Evening";
+        }
+        else if (DateTime.Now.Hour > 12)
+        {
+            txt = "Good AfterNoon";
+        }
+        else
+        {
+            txt = "Good Morning";
+        }
+    }
+    <p>@txt</p>
+</div>
+
+<div class="row">
+    <h3>If/Else Condition - Numeric</h3>
+    @{ var price = 20;}
+
+    @if (price >= 50)
+    {
+        <p>@price is Too High</p>
+    }
+    else if (price > 30 && price < 50)
+    {
+        <p>@price is Grand</p>
+    }
+    else
+    {
+        <p>@price is Too Low</p>
+    }
+</div>
+
+<div class="row">
+    <h3>Switch Condition</h3>
+
+    @{
+        var weekDay = DateTime.Now.DayOfWeek;
+        var dayName = weekDay.ToString();
+
+        switch (dayName)
+        {
+            case "Monday":
+                <p>Back to bed with you</p>
+                break;
+            case "Friday":
+                <p>Time to get up</p>
+                break;
+            default:
+                <p>Today is @dayName</p>
+                break;
+        }
+    }
+</div>

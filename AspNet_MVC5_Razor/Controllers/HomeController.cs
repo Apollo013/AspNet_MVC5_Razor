@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace AspNet_MVC5_Razor.Controllers
 {
@@ -24,6 +20,14 @@ namespace AspNet_MVC5_Razor.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        public ActionResult Conditions()
+        {
+            return View();
+        }
+        public ActionResult HelperComponent()
+        {
             return View();
         }
     }
