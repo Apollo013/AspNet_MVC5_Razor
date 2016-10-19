@@ -16,8 +16,9 @@ Developed with Visual Studio 2015 Community
 
 ---
 
-###Resources
+###Features
 |Url|Description|
 |---|-----------|
 |Home/Conditions|Demonstrates if/else & switch |
 |Home/HelperComponent|Demonstration of a format component for positive & negative currency amounts|
+|Home/Iterating|Demonstrates while and foreach loop of Model|
